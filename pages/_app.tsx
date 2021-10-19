@@ -6,8 +6,10 @@ import { useState } from 'react';
 import HelloWorld from './hello_world'
 
 function MyApp({ Component, pageProps }: AppProps) {
-return (
-  <Component {...pageProps} />
-)
+  // This will be executed on server and client as well everyTime
+  // console.log('From _app.tsx');
+  return (
+    <Component {...pageProps} />
+  )
 }
 export default MyApp

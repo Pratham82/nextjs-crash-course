@@ -1,3 +1,4 @@
+import capitalize from '../helpers/capitalize'
 import styles from '../styles/Home.module.css'
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
             key={link}
           >
             {' '}
-            <a href={link}> {link.replace('/', '')} </a>
+            <a href={link}> {capitalize(link.replace('/', ''))} </a>
           </li>
         ))}
       </ul>

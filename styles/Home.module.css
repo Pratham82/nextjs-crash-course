@@ -50,6 +50,10 @@
   font-size: 2rem;
 }
 
+.centeredText{
+  text-align: center;
+}
+
 .title,
 .description {
   text-align: center;

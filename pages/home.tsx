@@ -7,11 +7,16 @@ export default function HomePage() {
     <>
       <Navbar />
       <h1 className={styles.title}>HomePage</h1>
-      {['/home', '/hello_world', '/styling'].map((page, i) => (
-        <h3 className={styles.centeredText} key={page}>
-          <a href={page}> {`${i + 1}. ${capitalize(page.replace('/', ''))}`}</a>
-        </h3>
-      ))}
+      {['/home', '/hello_world', '/styling', '/fileStructure'].map(
+        (page, i) => (
+          <h3 className={styles.centeredText} key={page}>
+            <a href={page}>
+              {' '}
+              {`${i + 1}. ${capitalize(page.replace('/', ''))}`}
+            </a>
+          </h3>
+        )
+      )}
     </>
   )
 }

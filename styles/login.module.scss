@@ -1,0 +1,29 @@
+@mixin boilerplate {
+  padding: 15px 20px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 20px;
+  display: block;
+  border: 0.01px solid grey;
+  outline: none;
+  font-size: 20px;
+}
+
+.input {
+  @include boilerplate();
+}
+
+.submitBtn {
+  @include boilerplate();
+  background-color: rgb(25, 117, 238);
+  color: white;
+  cursor: pointer;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}

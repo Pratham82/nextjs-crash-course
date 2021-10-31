@@ -9,21 +9,23 @@
   font-size: 20px;
 }
 
-.input {
-  @include boilerplate();
-}
-
-.submitBtn {
-  @include boilerplate();
-  background-color: rgb(25, 117, 238);
-  color: white;
-  cursor: pointer;
-}
-
 .loginContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 70vh;
+  text-align: center;
+
+  .input {
+    @include boilerplate();
+  }
+
+  .submitBtn {
+    @include boilerplate();
+    background-color: rgb(25, 117, 238);
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+  }
 }

@@ -1,5 +1,7 @@
 import capitalize from '../helpers/capitalize'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import pages from '../data/pages'
 
 export default function Navbar() {
   return (
@@ -12,10 +14,12 @@ export default function Navbar() {
       }}
     >
       <h4 className={styles.title}>
-        <a href="/"> Next.js Demo </a>
+        <Link href="/home">
+          <a> Next.js Demo </a>
+        </Link>
       </h4>
       <ul>
-        {['/home', '/hello_world', '/about', '/contact'].map(link => (
+        {pages.map(link => (
           <li
             style={{
               display: 'inline-block',
@@ -27,7 +31,9 @@ export default function Navbar() {
             key={link}
           >
             {' '}
-            <a href={link}> {capitalize(link.replace('/', ''))} </a>
+            <Link href={link}>
+              <a>{capitalize(link.replace('/', ''))}</a>
+            </Link>
           </li>
         ))}
       </ul>

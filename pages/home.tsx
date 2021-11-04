@@ -1,22 +1,21 @@
 import Navbar from '../components/navbar'
 import capitalize from '../helpers/capitalize'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import pages from '../data/pages'
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
       <h1 className={styles.title}>HomePage</h1>
-      {['/home', '/hello_world', '/styling', '/fileStructure', '/login'].map(
-        (page, i) => (
-          <h3 className={styles.centeredText} key={page}>
-            <a href={page}>
-              {' '}
-              {`${i + 1}. ${capitalize(page.replace('/', ''))}`}
-            </a>
-          </h3>
-        )
-      )}
+      {pages.map((page, i) => (
+        <h3 className={styles.centeredText} key={page}>
+          <Link href={page}>
+            <a> {`${i + 1}. ${capitalize(page.replace('/', ''))}`}</a>
+          </Link>
+        </h3>
+      ))}
     </>
   )
 }

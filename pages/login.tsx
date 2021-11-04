@@ -7,6 +7,8 @@ import {
   FormsSubmitEvent,
 } from '../types/types'
 import Router from 'next/router'
+import jwt from 'jsonwebtoken'
+import Navbar from '../components/navbar'
 
 export default function Login() {
   const initialForm = {
@@ -41,6 +43,11 @@ export default function Login() {
         Router.push('/home')
         console.log(token)
 
+        // Decode jwt
+        const json = jwt.decode(token) as {[key: string]: string}
+        const {username}= json
+        console.log(`Welcome ${username}\nThis is your token: ${token}`);
+
         // Add token in local storage
       }
       success === true ? Router.push('/home') : setMessage(message)
@@ -51,6 +58,8 @@ export default function Login() {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className={styles.loginContainer}>
       {/* <form method="POST" action="/api/login"> */}
       <form>
@@ -81,5 +90,6 @@ export default function Login() {
       </form>
       {message && <h2>{message}</h2>}
     </div>
+    </>
   )
 }

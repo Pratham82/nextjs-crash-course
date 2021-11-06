@@ -15,6 +15,11 @@ export default function () {
           <h2 className={styles.centeredText}>Nested Route 🔗</h2>
         </a>
       </Link>
+      <Link href="/routing/users">
+        <a href="">
+          <h2 className={styles.centeredText}>Dynamic Routing/ Users page</h2>
+        </a>
+      </Link>
     </>
   )
 }

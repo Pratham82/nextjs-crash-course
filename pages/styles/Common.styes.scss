@@ -1,0 +1,12 @@
+.btnTemplate {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+  // background-color: rgb(41, 166, 250);
+}
+
+.routeBtn {
+  @include btnTemplate;
+  background-color: rgb(41, 166, 250);
+}

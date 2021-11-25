@@ -20,6 +20,11 @@ export default function () {
           <h2 className={styles.centeredText}>Dynamic Routing/ Users page</h2>
         </a>
       </Link>
+      <Link href="/routing/fruit">
+        <a href="">
+          <h2 className={styles.centeredText}>Fruits page(CatchAll route)</h2>
+        </a>
+      </Link>
     </>
   )
 }

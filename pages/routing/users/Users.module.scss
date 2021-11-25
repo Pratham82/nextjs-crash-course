@@ -1,0 +1,20 @@
+.btnTemplate {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.routeBtn {
+  @extend .btnTemplate;
+  background-color: rgb(41, 166, 250);
+}
+
+.routeBtn:hover {
+  transform: scale(1.05);
+  transition: 0.1s ease-in-out;
+  background-color: rgb(100, 193, 255);
+}

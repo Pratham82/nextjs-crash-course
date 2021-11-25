@@ -3,6 +3,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
+import capitalize from '../helpers/capitalize'
+import Link from 'next/link'
+import pages from '../data/pages'
+;``
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +19,15 @@ const Home: NextPage = () => {
 
       <Navbar />
       <main className={styles.main}>
-        <div className={styles.grid}></div>
+        <h1 className={styles.title}>HomePage</h1>
+        {pages.map((page, i) => (
+          <h3 className={styles.centeredText} key={page}>
+            <Link href={page}>
+              <a> {`${i + 1}. ${capitalize(page.replace('/', ''))}`}</a>
+            </Link>
+          </h3>
+        ))}
+        {/* <div className={styles.grid}></div> */}
       </main>
 
       <footer className={styles.footer}>
